@@ -1,0 +1,109 @@
+$primary-color: #fc8019;
+$secondary-color: #ffffff;
+$third-color: #878484;
+
+
+div.input-group{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    div{
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        position: relative;
+        div.nation, input{
+            display: flex;
+            align-items: center !important;
+            color: $secondary-color;
+            width: 100%;
+            height: 3.438rem;
+            padding: 0 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+            i{
+                margin-right: 1rem;
+            }
+            
+        }
+        
+        .separator {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 2rem;
+            background-color: $secondary-color;
+            margin: 0;
+            z-index: 10;
+          }
+
+        .input-search {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $secondary-color;
+            margin-left: .5rem;
+            z-index: 10;
+        }
+
+        div.nation{
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+        }
+        div.option-div {
+            display: none;
+            margin-top: .3rem;
+            border-radius: .5rem;
+            padding-top: .3rem;
+            .option-item{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            &.visible {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                top: 100%;
+                position: absolute;
+                z-index: 10;
+                height: auto;
+                color: $third-color;
+                background-color: #ffffff;
+                border-bottom-left-radius: .5rem;
+                border-bottom-right-radius: .5rem;   
+                .SelectNation{
+                    display: flex;
+                    flex-direction: row;
+                    padding: .5rem 1.5rem;
+                    width: 100%;
+                    i{
+                        padding-right: .5rem;
+                    }
+                }
+                .SelectNation:hover{
+                    color: $primary-color;
+                    background-color: lightgray;
+                }
+            }
+        }
+        
+        
+
+        input {
+            color: $secondary-color;
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                padding: 1rem;
+                color: $secondary-color;
+            }
+        }
+    }
+}

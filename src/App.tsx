@@ -1,11 +1,18 @@
+import React, { useState } from 'react';
 import { QButton } from "@/components";
+// import { Header } from '@/components';
+// import { Menu } from '@/components';
+// import { Content } from '@/components';
+import { Dashboard } from '@/components';
+
+
+import './app.css';
+
+
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-center">Hello world!</h1>
-      <QButton />
-    </div>
+    <Dashboard/>
   );
 };
 
