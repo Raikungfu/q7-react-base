@@ -5,8 +5,8 @@ import vi from "../locales/vi.json";
 const resources = { en, vi };
 
 i18n.use(initReactI18next).init({
-  fallbackLng: "en",
-  lng: "en",
+  fallbackLng: "vi",
+  lng: "vi",
   debug: true,
   interpolation: {
     escapeValue: false, // not needed for react as it escapes by default

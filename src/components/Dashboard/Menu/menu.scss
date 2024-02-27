@@ -1,0 +1,163 @@
+$primary-color: #fc8019;
+$secondary-color: #878484;
+
+
+  .nav-header, .nav-bar{
+    width: 250px;
+}
+
+.nav-bar{
+    position: relative;
+    nav {
+        cursor: pointer;
+        height: 90vh;
+        width: 100%;
+        border: solid;
+        border-width: 0 1px 0 0;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding-right: 3rem;
+        ul.menu {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            li {
+                line-height: 1.5rem;
+                text-align: left;
+                i {
+                    font-size: 1.2rem;
+                    padding-right: 1rem;
+                }
+
+                &.nav-title {
+                    font-size: .9rem;
+                    color: $primary-color;
+                    padding: 0 .5rem;
+                    margin: 1.5rem 0 0 2rem;
+                }
+
+                &.nav-text {
+                    width: 100%;
+                    color: $secondary-color;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 1 2.5rem;
+                    margin: 0 1.2rem 0 2rem;
+                    transition: all 3s ease-in-out;
+                    .nav-text-title {
+                        display: flex;
+                        margin-top: 2.5rem;
+                    }
+
+                    a {
+                        display: flex;
+                        position: relative;
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        li {
+                            text-align: left;
+                            padding-top: 1rem;
+                            padding-left: 2rem;
+                            align-items: center;
+                            display: flex;
+                            flex-direction: row;
+                            &.submenu-text {
+                                font-weight: 100;
+                                .line {
+                                    width: .3rem;
+                                    background-color: $primary-color;
+                                    display: block;
+                                    height: .1rem;
+                                    margin-bottom: .375rem;
+                                    margin-right: 1.5rem;
+                                    margin-top: .375rem;
+                                    transition: all .3s ease-in-out;
+                                }
+
+                                &:hover {
+                                    .line {
+                                        width: 1rem;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            
+            }
+            &::before {
+                background: #fff;
+                border-radius: 30px 0 0 0;
+                z-index: 2;
+            }
+
+            &::after {
+                background: $primary-color;
+                z-index: -8;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                height: 2.5rem;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 2.5rem;
+            }
+        }
+}
+
+.has-arrow {
+    &::after {
+        text-align: center;
+        border-color: #c8c8c8 transparent transparent #c8c8c8;
+        border-width: .3125rem;
+        content: "";
+        height: .5em;
+        position: absolute;
+        right: 1em;
+        transform: rotate(135deg);
+        transition: all .3s ease-out;
+        width: .5em;
+        top: calc(50% - 0.25em);
+    }
+
+    &.dropdownNarrow {
+        &::after{
+            transform: rotate(225deg);
+        }
+        
+    }
+}
+
+.hiddenTitleNav {
+    width: 6.5rem;
+    .nav-title{
+        display: none;
+    }
+    .nav-header, .nav-bar{
+        width: 6.5rem;
+    }
+    
+    h1{
+        display: none;
+    }
+    span{
+        display: none;
+    }
+
+    .nav-text-title::after{
+        display: none;
+    }
+}
+
+
